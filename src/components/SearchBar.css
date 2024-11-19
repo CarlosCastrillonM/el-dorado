@@ -107,3 +107,9 @@
     gap: 10px;
   }
 }
+
+.centrado {
+  width: 70%;             /* Ajusta el ancho según necesites */
+  margin: 0 auto;         /* Centra horizontalmente */
+  text-align: center;     /* Centra el texto dentro del div si es necesario */
+}
