@@ -1,10 +1,15 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SearchBar from './components/SearchBar.jsx';
 import NavBar from './assets/component/jsx/NavBar.jsx';
+import SignIn from './assets/pages/login/components/signin_form/SignIn.jsx';
 import './App.css'; 
 
 const App = () => {
+
+  
   return (
+
 
     <div className="App">
       <div className="NavBar">
@@ -18,9 +23,6 @@ const App = () => {
         {/* Inserta el componente de búsqueda aquí */}
         <SearchBar />
       </div>
-      
-      
-      
     </div>
   );
 };
