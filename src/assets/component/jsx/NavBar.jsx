@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../../img/logo_eldorado.jpg';
 import '../css/NavBar.css';
 
 const Navbar = () => {
@@ -11,10 +12,12 @@ const Navbar = () => {
           <span>💰 Colombia (COP)</span>
         </div>
       </div>
+
       <div className="navbar-main">
         <div className="logo">
-          <img src="https://static.vecteezy.com/system/resources/previews/029/885/475/non_2x/airplanes-icon-on-white-background-plane-logo-vector.jpg" alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
+
         <nav className="navbar-links">
           <a href="#reservar">Reservar</a>
           <a href="#ofertas">Ofertas y destinos</a>

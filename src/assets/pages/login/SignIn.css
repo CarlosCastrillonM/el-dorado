@@ -1,0 +1,14 @@
+
+.container-main {
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container-login {
+    display: flex;
+    background-color: brown;
+    padding: 2rem;
+}

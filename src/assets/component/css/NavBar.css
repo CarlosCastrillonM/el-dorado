@@ -30,7 +30,7 @@
 }
   
 .logo img {
-    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    width: 100%;
 }
   
 .navbar-links {
@@ -43,6 +43,10 @@
     text-decoration: none;
     color: #333;
     font-weight: 500;
+}
+
+.navbar-links a:hover {
+    color: #535bf2;
 }
   
 .checkin-button {
@@ -61,5 +65,5 @@
   
 .content {
     /* Añadir margen superior para evitar que el contenido se solape con el menú fijo */
-    margin-top: 80px; /* Ajusta este valor según la altura del navbar */
+    margin-top: 80px;
 }
