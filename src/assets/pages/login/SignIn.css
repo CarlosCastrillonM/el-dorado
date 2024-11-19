@@ -5,10 +5,25 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    background-color: aquamarine;
 }
 
 .container-login {
+    width: 30vw;
+    height: 60vh;
     display: flex;
     background-color: brown;
     padding: 2rem;
+    justify-content: center;
+    border-radius: 3rem;
+}
+
+form {
+    background-color: blue;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-bottom: 1rem;
 }

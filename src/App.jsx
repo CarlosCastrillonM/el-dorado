@@ -19,9 +19,12 @@ const App = () => {
         <Routes>
           <Route path="/a" element={<><NavBar /> <SearchBar /></>} />
           <Route path="/b" element={<NavBar />} />
-          <Route path="/c" element={<SignIn />} />
         </Routes>
       </div>
+
+      <Routes>
+        <Route path="/c" element={<SignIn />} />
+      </Routes>
 
       </Router>
 
