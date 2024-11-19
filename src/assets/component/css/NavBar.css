@@ -1,0 +1,65 @@
+
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    top: 0;
+}
+  
+.navbar-top {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 5px 20px;
+}
+  
+.navbar-options span {
+    margin-left: 15px;
+}
+  
+.navbar-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+  
+.logo img {
+    width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+}
+  
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+  
+.checkin-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+  
+.checkin-button:hover {
+    background-color: #0056b3;
+}
+  
+.content {
+    /* Añadir margen superior para evitar que el contenido se solape con el menú fijo */
+    margin-top: 80px; /* Ajusta este valor según la altura del navbar */
+}
