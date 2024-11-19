@@ -1,32 +1,27 @@
 import React, { useState } from 'react';
-import PassengerSelector from './PassengerSelector'; // Importar el componente de selección de pasajeros
-import './SearchBar.css'; // Asegúrate de tener el CSS actualizado
+import PassengerSelector from './PassengerSelector'; 
+import './SearchBar.css'; 
 
 const SearchBar = () => {
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const [isRoundTrip, setIsRoundTrip] = useState(true); 
-  const [passengerCount, setPassengerCount] = useState(1); // Estado para el número de pasajeros
-  const [isPassengerSelectorVisible, setPassengerSelectorVisible] = useState(false); // Para mostrar/ocultar el selector
+  const [passengerCount, setPassengerCount] = useState(1); 
+  const [isPassengerSelectorVisible, setPassengerSelectorVisible] = useState(false); 
 
-  // Función para manejar el tipo de viaje
   const handleTripTypeChange = (event) => {
     const tripType = event.target.value;
     setIsRoundTrip(tripType === 'ida-y-vuelta');
   };
 
-  // Función para abrir o cerrar el selector de pasajeros
   const togglePassengerSelector = () => {
     setPassengerSelectorVisible(!isPassengerSelectorVisible);
   };
-
-  // Función para manejar la confirmación de los pasajeros
   const handlePassengerConfirm = (passengers) => {
     const totalPassengers = passengers.adults + passengers.teens + passengers.children + passengers.infants;
-    setPassengerCount(totalPassengers); // Actualizar el contador con el total de pasajeros
-    setPassengerSelectorVisible(false); // Cerrar el selector después de confirmar
+    setPassengerCount(totalPassengers); 
+    setPassengerSelectorVisible(false); 
   };
-
   return (
     <div className="search-bar-container">
       <div className="search-bar">
