@@ -1,0 +1,129 @@
+/* General Container */
+.container-signup {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240); /* Fondo neutro */
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* Sign Up Form */
+.signup-form {
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.signup-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo-container {
+    margin-bottom: 1rem;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Form Title */
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4d4d4d;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Añadir input[type="email"] al estilo general de input */
+input[type="email"], input[type="password"], input[type="text"] {
+    background-color: #f9f9f9;
+}
+
+/* Mantener el enfoque uniforme en todos los inputs */
+input:focus {
+    outline: none;
+    border-color: #0077c7;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+input::placeholder {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Error Message */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Link to SignIn */
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .signup-form {
+        width: 25vw;
+        padding: 2.5rem;
+    }
+
+    input, button[type="submit"] {
+        font-size: 1.1rem;
+    }
+}
