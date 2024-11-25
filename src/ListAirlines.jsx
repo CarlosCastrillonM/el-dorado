@@ -18,7 +18,7 @@ const ListAirlines = () => {
     }, [state])
 
     return (
-        <Panel header="List of Airlines" style={{ width: '70vw', margin: '0 auto', marginTop: '15%' }} toggleable={true}>
+        <Panel header="List of Airlines" style={{ width: '70vw', margin: '0 auto', marginTop: '25vh' }} toggleable={true}>
             <DataTable value={state.airlines} style={{ width: '80%', margin: '0 auto' }}>
                 <Column field="id" header="Id"></Column>
                 <Column field="name" header="Name"></Column>
