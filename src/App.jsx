@@ -7,32 +7,42 @@ import SignIn from './assets/pages/login/components/signin_form/SignIn.jsx';
 import SignUp from './assets/pages/login/components/register_form/SignUp.jsx';
 import './App.css';
 
+const Layout = ({ children }) => {
+  return (
+    <>
+      <NavBar />
+      <>{children}</>
+    </>
+  );
+};
+
 const App = () => {
   return (
+    <Router>
+      <Routes>
+        {/* Rutas con Layout */}
+        <Route
+          path="/a"
+          element={
+            <Layout>
+              <ListAirlines />
+            </Layout>
+          }
+        />
+        <Route
+          path="/b"
+          element={
+            <Layout>
+              <SearchBar />
+            </Layout>
+          }
+        />
 
-    <>
-      <Router>
-        <NavBar />
-          <Routes>
-            <Route path="/a" Component={ListAirlines} />
-          </Routes>
-
-          <Routes>
-            <Route className="centrado" path="/b" Component={ SearchBar } />
-          </Routes>
-      </Router>
-
-      <Router>
-        <Routes>
-          {/* Ruta para el SignIn */}
-          <Route path="/c" element={<SignIn />} />  {/* Agregada la ruta para el inicio de sesión */}
-
-          {/* Ruta para el SignUp */}
-          <Route path="/d" element={<SignUp />} />  {/* Agregada la ruta para el registro */}
-        </Routes>
-      </Router >
-    </>
-
+        {/* Rutas sin Layout */}
+        <Route path="/c" element={<SignIn />} />
+        <Route path="/d" element={<SignUp />} />
+      </Routes>
+    </Router>
   );
 };
 
