@@ -12,7 +12,6 @@ const App = () => {
 
     <>
       <Router>
-        <div>
           <NavBar />
 
           <Routes>
@@ -22,8 +21,6 @@ const App = () => {
           <Routes>
             <Route className="centrado" path="/b" Component={SearchBar} />
           </Routes>
-
-        </div>
       </Router>
 
       <Router>
