@@ -30,7 +30,7 @@ const App = () => {
           }
         />
         <Route
-          path="/b"
+          path="/home"
           element={
             <Layout>
               <SearchBar />
@@ -39,8 +39,8 @@ const App = () => {
         />
 
         {/* Rutas sin Layout */}
-        <Route path="/c" element={<SignIn />} />
-        <Route path="/d" element={<SignUp />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
