@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ListAirlines from './ListAirlines.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import NavBar from './assets/component/jsx/NavBar.jsx';
 import SignIn from './assets/pages/login/components/signin_form/SignIn.jsx';
@@ -12,35 +13,31 @@ import './App.css';
 const App = () => {
 
   return (
-    <div>
+
+    <>
       <Router>
-        
-      <div className="App">
-        <Routes>
-          <Route path="/a" element={<><NavBar /> <SearchBar /></>} />
-          <Route path="/b" element={<NavBar />} />
-        </Routes>
-      </div>
+      <div>
+        <NavBar />
 
       <Routes>
-        <Route path="/c" element={<SignIn />} />
+        <Route path="/a" Component={ ListAirlines }/>
       </Routes>
 
+      <Routes>
+        <Route className="centrado" path="/b" Component={ SearchBar } />
+      </Routes>
+
+      </div>
       </Router>
 
-      {/* <div className="App">
-        <div className="NavBar">
-          <NavBar />
-        </div>
+      <Router>
+        <Routes>
+          <Route path="/c" Component={ NavBar } />
+        </Routes>
+      </Router>
+    
+    </>
 
-        <div className="centrado">
-          <header>
-            <h1>Busca tu vuelo</h1>
-          </header>
-          <SearchBar />
-        </div>
-      </div> */}
-    </div>
   );
 };
 
