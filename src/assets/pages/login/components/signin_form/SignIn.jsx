@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Importa Link para la navegación entre páginas
-import '../../SignIn.css';
+import './SignIn.css';
 import logo from '../../../../img/logo_eldorado.jpg';
 
 const SignIn = () => {
