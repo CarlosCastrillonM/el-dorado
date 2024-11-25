@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ListAirlines from './ListAirlines.jsx';
-import SearchBar from './components/SearchBar.jsx';
-import NavBar from './assets/component/jsx/NavBar.jsx';
+import ListAirlines from './components/jsx/ListAirlines.jsx';
+import SearchBar from './components/jsx/SearchBar.jsx';
+import NavBar from './components/jsx/NavBar.jsx';
 import SignIn from './assets/pages/login/components/signin_form/SignIn.jsx';
 import SignUp from './assets/pages/login/components/register_form/SignUp.jsx';
 import './App.css';

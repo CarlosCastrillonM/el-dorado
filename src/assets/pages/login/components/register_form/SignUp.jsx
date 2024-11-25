@@ -10,6 +10,7 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
   const userSignup = new UserSignup();
 
@@ -31,16 +32,16 @@ const SignUp = () => {
       const userData = {
         username,
         email,
-        password
+        password,
+        roles: 'ROLE_USER'
       };
       
       const response = await userSignup.saveUser(userData);
-      
-      // Manejar respuesta exitosa
+
       setSuccess('Usuario registrado exitosamente.');
       console.log('Respuesta del servidor:', response);
+
     } catch (err) {
-      // Manejar errores
       setError(err.response?.data?.message || 'Hubo un problema al registrar el usuario.');
     }
   };
@@ -91,6 +92,7 @@ const SignUp = () => {
           />
 
           {error && <p className="error-message">{error}</p>}
+          {success && <p className="success-message">{success}</p>}
 
           <button type="submit">Registrar</button>
         </form>

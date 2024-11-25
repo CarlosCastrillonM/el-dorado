@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import PassengerSelector from './PassengerSelector'; 
-import './SearchBar.css'; 
+import PassengerSelector from './passengerSelector'; 
+import '../css/SearchBar.css'; 
 
 const SearchBar = () => {
   const [origin, setOrigin] = useState('');
