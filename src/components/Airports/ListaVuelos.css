@@ -1,0 +1,174 @@
+/* Variables globales */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #ecf5fe;
+    --hover-color: #2980b9;
+    --danger-color: #e74c3c;
+    --danger-hover-color: #c0392b;
+    --success-color: #28a745;
+    --success-hover-color: #218838;
+    --text-color: #2c3e50;
+    --subtext-color: #7f8c8d;
+    --background-color: #f4f4f9;
+    --card-shadow: rgba(0, 0, 0, 0.08);
+    --card-hover-shadow: rgba(0, 0, 0, 0.15);
+}
+
+/* Ajustar el contenedor de los vuelos */
+.vuelos-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--card-shadow);
+    position: relative;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-bottom: 30px; /* Espacio adicional en el pie */
+}
+
+/* Ajuste del encabezado */
+.vuelos-container h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Lista de vuelos */
+.vuelos-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Estilos para las tarjetas */
+.vuelo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo del hover */
+.vuelo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px var(--card-hover-shadow);
+}
+
+/* Resaltar vuelo seleccionado */
+.vuelo-card.seleccionado {
+    border: 2px solid var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+/* Información del vuelo */
+.vuelo-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.vuelo-info p {
+    font-size: 14px;
+    color: var(--subtext-color);
+    margin-top: 5px;
+}
+
+/* Acciones (botones) */
+.vuelo-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botón de seleccionar */
+.boton-seleccionar {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-seleccionar.seleccionado {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.boton-seleccionar:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+/* Botón de agregar detalles del vuelo */
+.boton-agregar-detalles {
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-agregar-detalles:hover {
+    background-color: var(--hover-color);
+}
+
+/* Botón de eliminar */
+.boton-eliminar {
+    padding: 10px 20px;
+    background-color: var(--danger-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.boton-eliminar:hover {
+    background-color: var(--danger-hover-color);
+    transform: translateY(-2px);
+}
+
+/* Texto cuando no hay vuelos */
+.vuelos-container p {
+    text-align: center;
+    font-size: 16px;
+    color: var(--subtext-color);
+}
+
+/* Botón de finalizar */
+.boton-finalizar {
+    margin-top: 20px;
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-finalizar:hover {
+    background-color: var(--success-hover-color);
+}
