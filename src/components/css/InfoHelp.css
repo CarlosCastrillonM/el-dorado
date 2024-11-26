@@ -1,49 +1,50 @@
 /* InformacionAyuda.css */
 .info-ayuda-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  h1 {
-    color: #004080;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .section {
-    margin-bottom: 30px;
-  }
-  
-  .section h2 {
-    color: #003366;
-    margin-bottom: 10px;
-  }
-  
-  .faq h3 {
-    color: #0055a5;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .faq p {
-    margin-top: 5px;
-    padding-left: 10px;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  ul li {
-    margin-bottom: 10px;
-  }
-  
-  ul li::before {
-    content: "📍 ";
-    color: #004080;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #b0c400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.section h2 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.faq h3 {
+  color: #000000;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.faq p {
+  margin-top: 5px;
+  padding-left: 10px;
+  color: rgb(255, 255, 255);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li::before {
+  content: "📍 ";
+  color: #000000;
+}

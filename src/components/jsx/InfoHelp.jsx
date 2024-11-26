@@ -1,9 +1,9 @@
 import React from 'react';
-import './HelpInfo.css'; // Asegúrate de crear un archivo CSS para estilos personalizados
+import '../css/InfoHelp.css'; // Make sure to create a CSS file for custom styles
 
-const HelpInfo = () => {
+const InfoHelp = () => {
   return (
-    <div className="info-ayuda-container">
+<div className="info-ayuda-container">
       <h1>Información y Ayuda - El Dorado</h1>
 
       <section className="section">
@@ -53,4 +53,4 @@ const HelpInfo = () => {
   );
 };
 
-export default HelpInfo;
+export default InfoHelp;
