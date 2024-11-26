@@ -74,26 +74,29 @@ input::placeholder {
     font-style: italic;
 }
 
-/* Password Container and Button */
+/* Password Container and Icon */
 .password-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.toggle-password-btn {
+input[type="password"], input[type="text"] {
+    width: 100%;
+    padding-right: 40px; /* Añadir espacio para el ícono */
+}
+
+/* Estilos para el ícono de mostrar/ocultar contraseña */
+.toggle-password-icon {
     position: absolute;
     right: 10px;
-    background: none;
-    border: none;
+    font-size: 1.2rem;
     cursor: pointer;
     color: #007bff;
-    font-size: 0.9rem;
-    font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.toggle-password-btn:hover {
+.toggle-password-icon:hover {
     color: #0056b3;
 }
 
@@ -115,6 +118,7 @@ button[type="submit"]:hover {
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
+/* Error and Success Messages */
 .error-message {
     color: #e74c3c;
     font-size: 0.9rem;

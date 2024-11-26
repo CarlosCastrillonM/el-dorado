@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom';
 import { UserSignIn } from '../../services/UserSignIn';
 import './SignIn.css';
@@ -8,7 +8,7 @@ const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState(''); // Estado para manejar errores de validación
+  const [error, setError] = useState(''); 
   const [success, setSuccess] = useState('');
 
   const userSignIn = new UserSignIn();
@@ -20,23 +20,23 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Validación simple
     if (email.trim() === '' || password.trim() === '') {
       setError('El email y la contraseña son obligatorios.');
       return;
     }
 
-    try{
+    setError('');
+    setSuccess('');
+
+    try {
       const response = await userSignIn.login(email, password);
       console.log('Iniciar sesión con:', { email, password });
-
+      setSuccess('Inicio de sesión exitoso!');
+      // Aquí puedes redirigir al usuario o realizar otra acción
     } catch (err) {
       console.log(err);
       setError(err.response?.data?.message || 'Hubo un problema al iniciar sesión.');
     }
-
-    setError('');
-    console.log('Iniciar sesión con:', { email, password });
   };
 
   return (
@@ -49,7 +49,7 @@ const SignIn = () => {
           
           <p className='sub-title'>Correo</p>
           <input 
-            type="text" 
+            type="email" 
             placeholder="email" 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
@@ -68,23 +68,22 @@ const SignIn = () => {
               aria-label="Contraseña" 
               required 
             />
-            <button 
-              type="button" 
-              onClick={togglePasswordVisibility} 
-              className="toggle-password-btn"
+            <span 
+              className="toggle-password-icon"
+              onClick={togglePasswordVisibility}
               aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
             >
-              {showPassword ? 'Ocultar' : 'Mostrar'}
-            </button>
+              {showPassword ? '👁️‍🗨️' : '👁️‍🗨️'}
+            </span>
           </div>
 
           {error && <p className="error-message" aria-live="polite">{error}</p>}
+          {success && <p className="success-message" aria-live="polite">{success}</p>}
           <br />
 
           <button type='submit'>Iniciar Sesión</button>
         </form>
 
-        {/* Aquí se agrega el enlace al formulario de registro */}
         <div className="signup-link">
           <p>¿No tienes cuenta? <Link to="/signup">Regístrate aquí</Link></p>
         </div>
