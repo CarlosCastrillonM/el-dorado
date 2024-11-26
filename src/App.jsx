@@ -26,7 +26,7 @@ const App = () => {
       <Routes>
         {/* Rutas con Layout */}
         <Route
-          path="/api/v1/ListAirlines "
+          path="/api/v1/ListAirlines"
           element={
             <Layout>
               <ListAirlines />
