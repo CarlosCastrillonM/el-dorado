@@ -1,7 +1,7 @@
 import React from 'react';
-import './InformacionAyuda.css'; // Asegúrate de crear un archivo CSS para estilos personalizados
+import './HelpInfo.css'; // Asegúrate de crear un archivo CSS para estilos personalizados
 
-const InformacionAyuda = () => {
+const HelpInfo = () => {
   return (
     <div className="info-ayuda-container">
       <h1>Información y Ayuda - El Dorado</h1>
@@ -53,4 +53,4 @@ const InformacionAyuda = () => {
   );
 };
 
-export default InformacionAyuda;
+export default HelpInfo;
