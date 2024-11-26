@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { UserSignup } from '../../../../../services/UserSignup';
+import { UserSignup } from '../../services/UserSignup';
 import './SignUp.css'; // Asegúrate de que la ruta sea correcta
-import logo from '../../../../img/logo_eldorado.jpg'; // Ruta completa para la imagen
+import logo from '../../assets/img/logo_eldorado.jpg'; // Ruta completa para la imagen
 
 const SignUp = () => {
   const [username, setUsername] = useState('');

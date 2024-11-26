@@ -1,31 +1,39 @@
+// UserSignIn.js
 import axios from 'axios';
 
-export async function login(email, password) {
-    try {
+export class UserSignIn {
+    baseUrl = "http://localhost:8080/auth/";
 
-        const response = await axios.post('auth/login', { email, password })
+    async login(email, password) {
+        try {
+            const response = await axios.post(this.baseUrl + 'login', { email, password });
+            const responseBody = response.data;
+            console.log(responseBody);
 
-        const responseBody = response.data
-        console.log(responseBody)
-        
-        saveToken(responseBody.token)
-        saveUserId(responseBody.userId)
+            this.saveToken(responseBody.token);
+            this.saveUserId(responseBody.userId);
 
-        alert(JSON.stringify(responseBody))
-
-    } catch (err) {
-        if (err.response && err.response.status === 404) {
-            if (err.response.data && err.response.data.description) {
-                throw err.response.data.description
+            alert(JSON.stringify(responseBody));
+        } catch (err) {
+            console.log(err);
+            if (err.response && err.response.status === 404) {
+                if (err.response.data && err.response.data.description) {
+                    throw err.response.data.description;
+                }
             }
         }
     }
-}
 
-function saveToken(token) {
-    window.localStorage.setItem('auth-token', token)
-}
+    isAuthenticated() {
+        userId = window.localStorage.getItem("user-id");
+        return userId != null;
+    }
 
-function saveUserId(userId) {
-    window.localStorage.setItem('user-id', userId)
+    saveToken(token) {
+        window.localStorage.setItem('auth-token', token);
+    }
+
+    saveUserId(userId) {
+        window.localStorage.setItem('user-id', userId);
+    }
 }

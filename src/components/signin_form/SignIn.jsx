@@ -1,32 +1,42 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link para la navegación entre páginas
+import { Link } from 'react-router-dom';
+import { UserSignIn } from '../../services/UserSignIn';
 import './SignIn.css';
-import logo from '../../../../img/logo_eldorado.jpg';
+import logo from '../../assets/img/logo_eldorado.jpg';
 
 const SignIn = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(''); // Estado para manejar errores de validación
   const [success, setSuccess] = useState('');
 
+  const userSignIn = new UserSignIn();
+
   const togglePasswordVisibility = () => {
     setShowPassword(prevState => !prevState);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Validación simple
-    if (username.trim() === '' || password.trim() === '') {
-      setError('El nombre de usuario y la contraseña son obligatorios.');
+    if (email.trim() === '' || password.trim() === '') {
+      setError('El email y la contraseña son obligatorios.');
       return;
     }
 
-    // Simulación de inicio de sesión
-    setError(''); // Limpiar errores si todo está bien
-    console.log('Iniciar sesión con:', { username, password });
-    // Aquí iría la lógica de autenticación
+    try{
+      const response = await userSignIn.login(email, password);
+      console.log('Iniciar sesión con:', { email, password });
+
+    } catch (err) {
+      console.log(err);
+      setError(err.response?.data?.message || 'Hubo un problema al iniciar sesión.');
+    }
+
+    setError('');
+    console.log('Iniciar sesión con:', { email, password });
   };
 
   return (
@@ -37,13 +47,13 @@ const SignIn = () => {
             <img src={logo} className='logo' alt="Logo ElDorado" />
           </div>
           
-          <p className='sub-title'>Usuario</p>
+          <p className='sub-title'>Correo</p>
           <input 
             type="text" 
-            placeholder="Pepe352" 
-            value={username} 
-            onChange={(e) => setUsername(e.target.value)} 
-            aria-label="Nombre de usuario" 
+            placeholder="email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            aria-label="correo electronico" 
             required 
           />
           <br />

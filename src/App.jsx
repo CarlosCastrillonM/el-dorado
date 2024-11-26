@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ListAirlines from './components/jsx/ListAirlines.jsx';  // Asegúrate de que la ruta sea correcta
 import SearchBar from './components/jsx/SearchBar.jsx';
 import NavBar from './components/jsx/NavBar.jsx';
-import SignIn from './assets/pages/login/components/signin_form/SignIn.jsx';
-import SignUp from './assets/pages/login/components/register_form/SignUp.jsx';
+import SignIn from './components/signin_form/SignIn.jsx';
+import SignUp from './components/register_form/SignUp.jsx';
 import AeropuertoForm from './components/Airports/AeropuertoForm.jsx';
 import AerolineasForm from './components/Airports/AerolineasForm.jsx';
 import VuelosForm from './components/Airports/VuelosForm.jsx';
