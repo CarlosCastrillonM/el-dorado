@@ -38,7 +38,7 @@ const InfoHelp = () => {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="contacto">
         <h2>Contacto</h2>
         <p>
           Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos:

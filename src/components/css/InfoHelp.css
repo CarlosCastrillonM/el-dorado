@@ -48,3 +48,7 @@ ul li::before {
   content: "📍 ";
   color: #000000;
 }
+
+#contacto {
+  color: #003366;
+}

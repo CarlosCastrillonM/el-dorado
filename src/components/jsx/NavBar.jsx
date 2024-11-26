@@ -33,7 +33,7 @@ const Navbar = () => {
 
         <nav className="navbar-links">
           <a href="#reservar">Reservar</a>
-          <a href="#ofertas">Ofertas y destinos</a>
+          <Link to="/offerFlights">Ofertas y destinos</Link>
           <a href="#tu-reserva">Tu reserva</a>
           {
             !isAuthenticated &&
