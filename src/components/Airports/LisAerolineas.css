@@ -1,0 +1,164 @@
+/* Ajustar el contenedor de las aerolíneas */
+.aerolineas-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-height: 80vh; /* Limitar la altura máxima para evitar que crezca demasiado */
+    overflow-y: auto; /* Habilitar desplazamiento vertical si la lista es grande */
+}
+
+/* Ajuste del encabezado */
+.aerolineas-container h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Lista de aerolíneas */
+.aerolineas-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px; /* Reducir espacio debajo del encabezado */
+}
+
+/* Estilos para las tarjetas */
+.aerolinea-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Estilo del hover */
+.aerolinea-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Resaltar aerolínea seleccionada */
+.aerolinea-card.seleccionada {
+    border: 2px solid #3498db; /* Resalta la selección con un borde azul */
+    background-color: #ecf5fe; /* Color de fondo suave cuando está seleccionada */
+}
+
+/* Información de la aerolínea */
+.aerolinea-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.aerolinea-info p {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* Acciones (botones) */
+.aerolinea-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botón de seleccionar */
+.boton-seleccionar {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    color: #2c3e50;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-seleccionar.seleccionada {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.boton-seleccionar:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Botón de agregar vuelos */
+.boton-agregar-vuelos {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block; /* Asegura que se centre */
+    width: 100%;
+    text-align: center;
+}
+
+.boton-agregar-vuelos:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de eliminar */
+.boton-eliminar {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Hace que el botón ocupe el mismo tamaño que el de "Seleccionar" */
+}
+
+.boton-eliminar:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Texto cuando no hay aerolíneas */
+.aerolineas-container p {
+    text-align: center;
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+/* Estilos para los botones en el contenedor de acciones */
+.aerolinea-actions button {
+    width: 100%; /* Asegura que los botones "Seleccionar" y "Eliminar" tengan el mismo ancho */
+}
+
+/* Ajustes para el contenedor general */
+.aerolineas-container {
+    padding-bottom: 30px; /* Ajuste para dar más espacio en el pie de la lista */
+}
+
+/* Botón de finalizar */
+.boton-finalizar {
+    margin-top: 20px;
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.boton-finalizar:hover {
+    background-color: #218838; /* Verde más oscuro al hacer hover */
+}
