@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PassengerSelector from './passengerSelector'; 
 import '../css/SearchBar.css'; 
 
+
 const SearchBar = () => {
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');

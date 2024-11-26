@@ -4,6 +4,7 @@ import { UserSignIn } from '../../services/UserSignIn';
 import './SignIn.css';
 import logo from '../../assets/img/logo_eldorado.jpg';
 
+
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -32,7 +33,7 @@ const SignIn = () => {
       const response = await userSignIn.login(email, password);
       console.log('Iniciar sesión con:', { email, password });
       setSuccess('Inicio de sesión exitoso!');
-      // Aquí puedes redirigir al usuario o realizar otra acción
+
     } catch (err) {
       console.log(err);
       setError(err.response?.data?.message || 'Hubo un problema al iniciar sesión.');

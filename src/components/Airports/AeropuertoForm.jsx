@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'; 
-import { useNavigate } from 'react-router-dom';  // Importamos useNavigate
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AerolineasForm from './AerolineasForm';
 import ListadoAerolíneas from './ListadoAerolíneas';
 import VuelosForm from './VuelosForm';
 import './forms.css';
+import fondo from '../../assets/img/fondo.jpg';
 
 const AeropuertoForm = () => {
   const [nombre, setNombre] = useState('');
@@ -152,7 +153,7 @@ const AeropuertoForm = () => {
   };
 
   return (
-    <div className="container-main">
+    <div className="container-main" style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="form-container">
         {renderizarPaso()}
       </div>

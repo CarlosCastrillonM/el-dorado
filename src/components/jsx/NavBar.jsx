@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../assets/img/logo_eldorado.jpg';
 import '../css/NavBar.css';
 
+
 const Navbar = () => {
   return (
     

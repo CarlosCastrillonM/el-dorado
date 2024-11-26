@@ -1,38 +1,48 @@
+/* Aplica la imagen de fondo a toda la pantalla */
+body {
+    background-image: url('../../assets/img/fondo.jpg'); /* Ruta de tu imagen */
+    background-size: cover; /* Para que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin: 0;
+    height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+}
+
 /* Contenedor del formulario de vuelos */
 .vuelos-form-container {
     width: 90%;
-    max-width: 500px; /* Reducir el tamaño máximo del formulario */
+    max-width: 400px; /* Reducir el tamaño máximo del formulario */
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    padding: 1.5rem; /* Reducir el padding */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    padding: 0.8rem; /* Reducir más el padding */
     justify-content: center;
-    border-radius: 1.2rem; /* Redondear un poco menos */
+    border-radius: 1rem; /* Redondear un poco menos */
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Menos sombra */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     margin: 0 auto;
 }
 
 /* Hover effect */
 .vuelos-form-container:hover {
-    transform: translateY(-3px); /* Menos transformación */
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Menos transformación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Menos sombra */
 }
 
 /* Título principal */
 .vuelos-form-container h3 {
-    font-size: 1.3rem; /* Reducir tamaño del título */
+    font-size: 1.1rem; /* Reducir aún más tamaño del título */
     color: #444;
-    margin-bottom: 1rem; /* Reducir el margen inferior */
+    margin-bottom: 0.6rem; /* Reducir margen */
     text-align: center;
 }
 
 /* Estilo para el nombre de la aerolínea seleccionada */
 .aerolinea-seleccionada {
-    margin-bottom: 1rem; /* Reducir el margen inferior */
+    margin-bottom: 0.6rem; /* Reducir margen */
     background-color: #e0f7fa;
-    padding: 8px;
+    padding: 5px; /* Reducir padding */
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
@@ -40,24 +50,24 @@
 
 /* Estilo de los grupos de campos */
 .vuelos-form .form-group {
-    margin-bottom: 1rem; /* Reducir el espacio entre campos */
+    margin-bottom: 0.6rem; /* Reducir el espacio entre campos */
 }
 
 /* Etiquetas de los campos */
 .vuelos-form label {
     display: block;
-    font-size: 1rem; /* Reducir tamaño de la fuente */
+    font-size: 0.9rem; /* Reducir tamaño de la fuente */
     color: #555;
-    margin-bottom: 0.3rem; /* Reducir margen inferior */
+    margin-bottom: 0.1rem; /* Reducir margen inferior */
 }
 
 /* Estilo de los inputs */
 .vuelos-form input {
     width: 100%;
-    padding: 0.8rem; /* Reducir padding */
-    border-radius: 0.8rem; /* Reducir border-radius */
+    padding: 0.6rem; /* Reducir padding */
+    border-radius: 0.5rem; /* Reducir border-radius */
     border: 1px solid #ccc;
-    font-size: 0.95rem; /* Reducir tamaño de fuente */
+    font-size: 0.85rem; /* Reducir tamaño de fuente */
     transition: all 0.3s ease;
     box-sizing: border-box;
 }
@@ -85,12 +95,12 @@
 /* Botón de Agregar Vuelo */
 .vuelos-form button.submit-btn {
     width: 100%;
-    padding: 0.7rem; /* Reducir el padding del botón */
-    font-size: 1rem; /* Reducir tamaño de fuente */
+    padding: 0.5rem; /* Reducir el padding del botón */
+    font-size: 0.9rem; /* Reducir tamaño de fuente */
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 1.2rem; /* Reducir border-radius */
+    border-radius: 1rem; /* Reducir border-radius */
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     margin-top: 1rem; /* Reducir el margen superior */
@@ -105,8 +115,8 @@
 /* Estilos adicionales para el contenedor de error */
 .vuelos-form .error-message {
     color: #e74c3c;
-    font-size: 0.85rem; /* Reducir tamaño del mensaje */
-    margin-bottom: 0.8rem; /* Reducir margen inferior */
+    font-size: 0.8rem; /* Reducir tamaño del mensaje */
+    margin-bottom: 0.6rem; /* Reducir margen inferior */
 }
 
 /* Asegurar que los inputs y botones ocupen todo el ancho */
@@ -117,5 +127,5 @@
 
 /* Añadir espacio entre los grupos de campos */
 .vuelos-form .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
