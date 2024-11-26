@@ -3,12 +3,14 @@ import logo from '../../assets/img/logo_eldorado.jpg';
 import { Link } from 'react-router-dom';
 import '../css/NavBar.css';
 import { UserSignIn } from '../../services/UserSignIn';
+import InfoHelp from '../jsx/InfoHelp';
 
 
 const Navbar = () => {
 
   let isAuthenticated = false;
   const userSignIn = new UserSignIn();
+  //const infoHelp = new InfoHelp();
 
   if (userSignIn.isAuthenticated()) {
     isAuthenticated = true;
@@ -39,7 +41,9 @@ const Navbar = () => {
               <Link to="/signin">Check-in</Link>
             </button>)
           }
-          <a href="#informacion">Información y ayuda</a>
+          
+          <Link to="/infoHelp">Información y ayuda</Link>
+
           <a href="#lifemiles">Lifemiles</a>
         </nav>
       </div>

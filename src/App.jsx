@@ -11,6 +11,7 @@ import VuelosForm from './components/Airports/VuelosForm.jsx';
 import ListadoAerolíneas from './components/Airports/ListadoAerolíneas.jsx'; // Importa el componente ListadoAerolíneas
 import AirlineGrid from './components/jsx/AirlineGrid.jsx';
 import './App.css';
+import InfoHelp from './components/jsx/InfoHelp.jsx';
 
 const Layout = ({ children }) => {
   return (
@@ -55,6 +56,7 @@ const App = () => {
         {/* Rutas sin Layout */}
         <Route path="/aeropuerto" element={<AeropuertoForm />} />
         <Route path="/aerolineas" element={<AerolineasForm />} />
+        <Route path="/infohelp" element={<InfoHelp />} />
         <Route path="/vuelos" element={<VuelosForm />} />
         <Route path="/listado-aerolineas" element={<ListadoAerolíneas />} /> {/* Nueva ruta agregada */}
         <Route path="/SignIn" element={<SignIn />} />
