@@ -1,17 +1,16 @@
 // UserSignIn.js
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 
 export class UserSignIn {
-    baseUrl = "http://localhost:8080/auth/";
-
     async login(email, password) {
         try {
-            const response = await axios.post(this.baseUrl + 'login', { email, password });
+            const response = await axios.post('auth/login', { email, password });
             const responseBody = response.data;
             console.log(responseBody);
 
-            this.saveToken(responseBody.token);
-            this.saveUserId(responseBody.userId);
+            this.saveToken(responseBody);
+            //this.saveUserId(responseBody);
 
             alert(JSON.stringify(responseBody));
         } catch (err) {
@@ -25,8 +24,8 @@ export class UserSignIn {
     }
 
     isAuthenticated() {
-        userId = window.localStorage.getItem("user-id");
-        return userId != null;
+        let userId = window.localStorage.getItem("user-id");
+        return (userId != null && this.isTokenExpired(this.getToken()));
     }
 
     saveToken(token) {
@@ -36,4 +35,21 @@ export class UserSignIn {
     saveUserId(userId) {
         window.localStorage.setItem('user-id', userId);
     }
+
+    getToken() {
+        return window.localStorage.getItem("auth-token");
+    }
+
+    isTokenExpired(token) {
+        try {
+            const decoded = jwtDecode(token);
+            const currentTime = Math.floor(Date.now() / 1000);
+            return decoded.exp < currentTime;
+        } catch (error) {
+            console.error("Invalid token:", error);
+            return true;
+        }
+    }
+
+
 }

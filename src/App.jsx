@@ -9,6 +9,7 @@ import AeropuertoForm from './components/Airports/AeropuertoForm.jsx';
 import AerolineasForm from './components/Airports/AerolineasForm.jsx';
 import VuelosForm from './components/Airports/VuelosForm.jsx';
 import ListadoAerolíneas from './components/Airports/ListadoAerolíneas.jsx'; // Importa el componente ListadoAerolíneas
+import AirlineGrid from './components/jsx/AirlineGrid.jsx';
 import './App.css';
 
 const Layout = ({ children }) => {
@@ -38,6 +39,15 @@ const App = () => {
           element={
             <Layout>
               <SearchBar />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/airline-grid"
+          element={
+            <Layout>
+              <AirlineGrid />
             </Layout>
           }
         />

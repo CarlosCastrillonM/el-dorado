@@ -1,9 +1,19 @@
 import React from 'react';
 import logo from '../../assets/img/logo_eldorado.jpg';
+import { Link } from 'react-router-dom';
 import '../css/NavBar.css';
+import { UserSignIn } from '../../services/UserSignIn';
 
 
 const Navbar = () => {
+
+  let isAuthenticated = false;
+  const userSignIn = new UserSignIn();
+
+  if (userSignIn.isAuthenticated()) {
+    isAuthenticated = true;
+  }
+
   return (
     
     <div className="navbar">
@@ -23,7 +33,12 @@ const Navbar = () => {
           <a href="#reservar">Reservar</a>
           <a href="#ofertas">Ofertas y destinos</a>
           <a href="#tu-reserva">Tu reserva</a>
-          <button className="checkin-button">Check-in</button>
+          {
+            !isAuthenticated &&
+            (<button className="checkin-button">
+              <Link to="/signin">Check-in</Link>
+            </button>)
+          }
           <a href="#informacion">Información y ayuda</a>
           <a href="#lifemiles">Lifemiles</a>
         </nav>
