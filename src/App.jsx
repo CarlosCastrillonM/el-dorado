@@ -57,6 +57,7 @@ const App = () => {
         <Route path="/aeropuerto" element={<AeropuertoForm />} />
         <Route path="/aerolineas" element={<AerolineasForm />} />
         <Route path="/infohelp" element={<InfoHelp />} />
+        <Route path="/AirlineGrid" element={<AirlineGrid />} />
         <Route path="/vuelos" element={<VuelosForm />} />
         <Route path="/listado-aerolineas" element={<ListadoAerolíneas />} /> {/* Nueva ruta agregada */}
         <Route path="/SignIn" element={<SignIn />} />

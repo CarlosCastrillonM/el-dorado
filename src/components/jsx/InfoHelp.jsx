@@ -1,56 +1,56 @@
 import React from 'react';
-import '../css/InfoHelp.css'; // Make sure to create a CSS file for custom styles
+import './InformacionAyuda.css'; // Asegúrate de crear un archivo CSS para estilos personalizados
 
-const InfoHelp = () => {
+const InformacionAyuda = () => {
   return (
     <div className="info-ayuda-container">
-      <h1>Information and Help - El Dorado</h1>
+      <h1>Información y Ayuda - El Dorado</h1>
 
       <section className="section">
-        <h2>General Information</h2>
+        <h2>Información General</h2>
         <p>
-          Welcome to El Dorado, your trusted airline. On our website, you can find a variety of national and international flight options, as well as make your reservations easily and quickly. Our goal is to provide you with a comfortable and safe travel experience.
+          Bienvenido a El Dorado, tu aerolínea de confianza. En nuestro sitio web, puedes encontrar diferentes opciones de vuelos nacionales e internacionales, así como realizar tus reservaciones de manera fácil y rápida. Nuestro objetivo es ofrecerte una experiencia de viaje cómoda y segura.
         </p>
       </section>
 
       <section className="section">
-        <h2>Frequently Asked Questions</h2>
+        <h2>Preguntas Frecuentes</h2>
         <div className="faq">
-          <h3>How can I book a flight?</h3>
+          <h3>¿Cómo puedo reservar un vuelo?</h3>
           <p>
-            You can book a flight by visiting the "Book" section in our main menu. Enter the departure city, destination, travel dates, and number of passengers to get the available results.
+            Puedes reservar un vuelo visitando la sección de "Reservar" en nuestro menú principal. Ingresa la ciudad de origen, destino, fechas de viaje y número de pasajeros para obtener los resultados disponibles.
           </p>
 
-          <h3>How can I check the status of my reservation?</h3>
+          <h3>¿Cómo puedo revisar el estado de mi reserva?</h3>
           <p>
-            Go to the "Your Reservation" section in the main menu and enter the reservation code and your last name to see the current status of your flight.
+            Ve a la sección "Tu reserva" en el menú principal e ingresa el código de reserva y tu apellido para ver el estado actual de tu vuelo.
           </p>
 
-          <h3>How can I check-in online?</h3>
+          <h3>¿Cómo puedo hacer el check-in en línea?</h3>
           <p>
-            Online check-in is available 24 hours before your flight departure. Simply click "Check-in" in our menu and follow the instructions.
+            El check-in en línea está disponible 24 horas antes de la salida de tu vuelo. Simplemente haz clic en "Check-in" en nuestro menú y sigue las instrucciones.
           </p>
 
-          <h3>What can I bring in my luggage?</h3>
+          <h3>¿Qué puedo llevar en mi equipaje?</h3>
           <p>
-            You can bring one carry-on bag and one checked luggage item according to El Dorado's baggage policies. Please check the baggage section in the "General Information" section for more details.
+            Puedes llevar una maleta de mano y una pieza de equipaje facturado según las políticas de equipaje de El Dorado. Consulta la sección de equipaje en la sección "Información General" para más detalles.
           </p>
         </div>
       </section>
 
       <section className="section">
-        <h2>Contact</h2>
+        <h2>Contacto</h2>
         <p>
-          If you have any questions or need additional assistance, please don't hesitate to contact us:
+          Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos:
         </p>
         <ul>
-          <li>Phone: +57 1 8000 123 456</li>
-          <li>Email: support@eldorado.com</li>
-          <li>Address: Calle 123, Bogotá, Colombia</li>
+          <li>Teléfono: +57 1 8000 123 456</li>
+          <li>Email: soporte@eldorado.com</li>
+          <li>Dirección: Calle 123, Bogotá, Colombia</li>
         </ul>
       </section>
     </div>
   );
 };
 
-export default InfoHelp;
+export default InformacionAyuda;
