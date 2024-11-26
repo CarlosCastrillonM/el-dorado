@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { UserSignup } from '../../../../../services/UserSignup';
 import './SignUp.css'; // Asegúrate de que la ruta sea correcta
 import logo from '../../../../img/logo_eldorado.jpg'; // Ruta completa para la imagen
 
@@ -9,8 +10,11 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
-  const handleSubmit = (e) => {
+  const userSignup = new UserSignup();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Validación básica de los campos
@@ -24,10 +28,27 @@ const SignUp = () => {
       return;
     }
 
-    // Aquí agregarías la lógica para enviar los datos al servidor, si fuera necesario
-    console.log('Registrando usuario:', { username, email, password });
-    setError('');
+    try {
+      const userData = {
+        username,
+        email,
+        password,
+        roles: 'ROLE_USER'
+      };
+      
+      const response = await userSignup.saveUser(userData);
+
+      setSuccess('Usuario registrado exitosamente.');
+      console.log('Respuesta del servidor:', response);
+
+    } catch (err) {
+      setError(err.response?.data?.message || 'Hubo un problema al registrar el usuario.');
+    }
   };
+
+    // Aquí agregarías la lógica para enviar los datos al servidor, si fuera necesario
+    // console.log('Registrando usuario:', { username, email, password });
+    // setError('');
 
   return (
     <div className="container-signup">
@@ -71,6 +92,7 @@ const SignUp = () => {
           />
 
           {error && <p className="error-message">{error}</p>}
+          {success && <p className="success-message">{success}</p>}
 
           <button type="submit">Registrar</button>
         </form>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ListAirlines from './ListAirlines.jsx';  // Asegúrate de que la ruta sea correcta
+import ListAirlines from './ListAirlines.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import NavBar from './assets/component/jsx/NavBar.jsx';
 import SignIn from './assets/pages/login/components/signin_form/SignIn.jsx';
@@ -34,7 +34,7 @@ const App = () => {
           }
         />
         <Route
-          path="/SearchBar"
+          path="/b"
           element={
             <Layout>
               <SearchBar />
@@ -43,12 +43,8 @@ const App = () => {
         />
 
         {/* Rutas sin Layout */}
-        <Route path="/aeropuerto" element={<AeropuertoForm />} />
-        <Route path="/aerolineas" element={<AerolineasForm />} />
-        <Route path="/vuelos" element={<VuelosForm />} />
-        <Route path="/listado-aerolineas" element={<ListadoAerolíneas />} /> {/* Nueva ruta agregada */}
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/c" element={<SignIn />} />
+        <Route path="/d" element={<SignUp />} />
       </Routes>
     </Router>
   );

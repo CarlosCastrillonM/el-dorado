@@ -121,6 +121,12 @@ button[type="submit"]:hover {
     margin-bottom: 1rem;
 }
 
+.success-message {
+    color: #00aa09;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
 /* Logo */
 .logo {
     width: 60px;

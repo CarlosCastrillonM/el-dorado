@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react';
 
-import { AirlineService } from './services/AirlineService';
+import { AirlineService } from '../../services/AirlineService';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { Panel } from 'primereact/panel';

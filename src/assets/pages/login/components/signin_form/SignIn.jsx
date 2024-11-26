@@ -8,6 +8,7 @@ const SignIn = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(''); // Estado para manejar errores de validación
+  const [success, setSuccess] = useState('');
 
   const togglePasswordVisibility = () => {
     setShowPassword(prevState => !prevState);

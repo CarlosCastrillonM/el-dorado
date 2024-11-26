@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
 import PropTypes from 'prop-types';
-import './PassengerSelector.css';
+import '../css/passengerSelector.css';
 
 const PassengerGroup = ({ label, ageGroup, count, onIncrement, onDecrement }) => (
   <div className="passenger-group">

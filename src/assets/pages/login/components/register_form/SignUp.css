@@ -76,14 +76,18 @@ input::placeholder {
     font-style: italic;
 }
 
-/* Error Message */
 .error-message {
     color: #e74c3c;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
-/* Submit Button */
+.success-message {
+    color: #169e0a;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
 button[type="submit"] {
     width: 100%;
     padding: 0.8rem;
