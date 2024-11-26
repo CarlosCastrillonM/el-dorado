@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PassengerSelector from './passengerSelector'; 
 import '../css/SearchBar.css'; 
-
+import fondo from '../../assets/img/fondo.jpg';
 
 const SearchBar = () => {
   const [origin, setOrigin] = useState('');
