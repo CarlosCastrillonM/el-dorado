@@ -8,7 +8,7 @@ const flights = [
     salida: '2024-12-01',
     llegada: '2024-12-01',
     capacidad: '150 pasajeros',
-    imagen: './assets/img/img1.jpg'
+    imagen: '/assets/img/img1.jpg'
   },
   {
     origen: 'Medellín',
@@ -16,7 +16,7 @@ const flights = [
     salida: '2024-12-05',
     llegada: '2024-12-05',
     capacidad: '120 pasajeros',
-    imagen: './assets/img/img2.jpeg'
+    imagen: '/assets/img/img2.jpeg'
   },
   {
     origen: 'Cali',
@@ -24,7 +24,7 @@ const flights = [
     salida: '2024-12-10',
     llegada: '2024-12-10',
     capacidad: '180 pasajeros',
-    imagen: './assets/img/img3.jpeg'
+    imagen: '/assets/img/img3.jpeg'
   },
   {
     origen: 'Bogotá',
@@ -32,7 +32,7 @@ const flights = [
     salida: '2024-12-15',
     llegada: '2024-12-15',
     capacidad: '200 pasajeros',
-    imagen: './assets/img/img4.jpg'
+    imagen: '/assets/img/img4.jpg'
   },
   {
     origen: 'Manizales',
@@ -40,7 +40,7 @@ const flights = [
     salida: '2024-12-15',
     llegada: '2024-12-15',
     capacidad: '180 pasajeros',
-    imagen: './assets/img/img5.jpeg'
+    imagen: '/assets/img/img5.jpeg'
   },
   {
     origen: 'Santa Marta',
@@ -48,7 +48,7 @@ const flights = [
     salida: '2024-08-11',
     llegada: '2024-18-11',
     capacidad: '200 pasajeros',
-    imagen: './assets/img/img6.jpg'
+    imagen: '/assets/img/img6.jpg'
   },
   // Agrega más vuelos según sea necesario
 ];

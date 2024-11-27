@@ -5,7 +5,12 @@ import { jwtDecode } from 'jwt-decode';
 export class UserSignIn {
     async login(email, password) {
         try {
-            const response = await axios.post('auth/login', { email, password });
+            const response = await axios.post('auth/login', { email, password }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: undefined
+                },
+            });
             const responseBody = response.data;
             console.log(responseBody);
 

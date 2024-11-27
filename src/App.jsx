@@ -55,6 +55,15 @@ const App = () => {
           }
         />
 
+        <Route
+          path="/offerFlights"
+          element={
+            <Layout>
+              <OfferFlights />
+            </Layout>
+          }
+        />
+
         {/* <Route
           path="/offerFlights"
           element={
@@ -68,7 +77,7 @@ const App = () => {
         <Route path="/aeropuerto" element={<AeropuertoForm />} />
         <Route path="/aerolineas" element={<AerolineasForm />} />
         <Route path="/infohelp" element={<InfoHelp />} />
-        <Route path="/offerFlights" element={<OfferFlights />} />
+        
         <Route path="/AirlineGrid" element={<AirlineGrid />} />
         <Route path="/vuelos" element={<VuelosForm />} />
         <Route path="/listado-vuelos" element={<ListadoVuelos />} />
